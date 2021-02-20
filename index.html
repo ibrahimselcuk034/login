@@ -50,27 +50,27 @@
         <div class="two fields">
           <div class="field">
             <label>E-posta adresi ile üye ol</label>
-            <input placeholder="Ad" type="text" id="signupfirstname" minlength="3" maxlength="24" oninput="FirstNameVal()">
+            <input placeholder="Ad" type="text" id="signupfirstname" minlength="3" maxlength="24" oninput="firstNameVal(), isValid()">
             <div class="ui pointing label" id="usernamewarn">
               Bu alan boş bırakılamaz
             </div>
           </div>
           <div class="field">
             <label> <hr align="right" width="85%" style="border-top: 1px solid rgb(235, 232, 232)"> </label>
-            <input placeholder="Soyad" type="text" id="signuplastname" style="margin-top: 8px;" minlength="3" maxlength="24" oninput="closeLastNameWarn()">
+            <input placeholder="Soyad" type="text" id="signuplastname" style="margin-top: 8px;" minlength="3" maxlength="24" oninput="lastNameVal(), isValid()">
             <div class="ui pointing label" id="lastnamewarn">
               Bu alan boş bırakılamaz
             </div>
           </div>
         </div>
         <div class="field">
-          <input type="email" id="signupmail" placeholder="E-posta adresi" oninput="closeEmailWarn()">
+          <input type="email" id="signupmail" placeholder="E-posta adresi" oninput="emailVal(), isValid()">
           <div class="ui pointing label" id="emailwarn">
             Bu alan boş bırakılamaz
           </div>
         </div>
         <div class="ui fluid action input userfield">
-          <input type="password" id="signuppassword" placeholder="Şifre" oninput="closePassWarn()">
+          <input type="password" id="signuppassword" placeholder="Şifre" oninput="passVal(), isValid()">
           <button class="ui icon button" id="signuppassmask1" onclick="PassShow(signuppassword)">
             <i class="eye icon"></i>
           </button>
@@ -81,7 +81,7 @@
         <br>
         <br>
         <div class="ui fluid action input userfield">
-          <input type="password" id="signuppasswordcontrol" placeholder="Şifre Onayı" oninput="closePassCtrlWarn()">
+          <input type="password" id="signuppasswordcontrol" placeholder="Şifre Onayı" oninput="passCtrlVal(), isValid()">
           <button class="ui icon button" id="signuppassmask2" onclick="PassShow(signuppasswordcontrol)">
             <i class="eye icon"></i>
           </button>
@@ -98,7 +98,7 @@
         <br>
         <div class="inline field">
           <div class="checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" id="checkbox">
+            <input type="checkbox" tabindex="0" class="hidden" id="checkbox" onclick="isValid()" >
             <label style="text-align: justify;">Önemli kampanyalardan haberdar olmak için <span style="font-weight: bolder;">Rıza Metni</span> kapsamında elektronik ileti almak istiyorum.</label>
           </div>
         </div>

@@ -118,6 +118,10 @@
   background-color: rgb(235, 232, 232);
 }
 
+#signupsubmitbtn:hover {
+  cursor: pointer;
+}
+
 #signup {
   display: none;
 }
