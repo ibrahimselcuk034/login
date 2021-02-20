@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+#maincontainer {
+  width: 35%;
+  height: 600px%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  border: 0.5px solid lightgrey;
+  padding: 30px;
+}
+
+#buttons{
+  background-color: rgb(235, 232, 232);
+  border-radius: 7px;
+}
+
+
+#loginbtn {
+  background-color: rgb(235, 232, 232);
+  border-top-left-radius: 5px;
+}
+
+#loginbtn:focus{
+  background-color:white;
+  border: 1px solid rgb(235, 232, 232);
+  border-radius: 10px;
+}
+
+#loginbtn:active{
+  background-color:white;
+  border: 1px solid rgb(235, 232, 232);
+  border-radius: 10px;
+}
+
+#signupbtn {
+  background-color: rgb(235, 232, 232);
+  border-top-right-radius: 5px;
+}
+
+#signupbtn:focus{
+  background-color:white;
+  border: 1px solid rgb(235, 232, 232);
+  border-radius: 10px;
+}
+
+#signupbtn:active{
+  background-color:white;
+  border: 1px solid rgb(235, 232, 232);
+  border-radius: 10px;
+}
+
+#useremail {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+}
+
+#userpassword {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+  border-right-style: none;
+}
+
+#passwordmask {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+  border-left-style: none;
+}
+
+#submitbtn {
+  background-color: orangered;
+  color: white;
+}
+
+#signupfirstname {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+}
+
+#signuplastname {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+} 
+
+#signupmail {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+} 
+
+#signuppassword {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+  border-right-style: none;
+}
+
+#signuppassmask1 {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+  border-left-style: none;
+}
+
+#signuppasswordcontrol {
+    background-color: rgb(235, 232, 232);
+    border: 1px solid lightgrey;
+    border-right-style: none;
+}
+ 
+
+#signuppassmask2 {
+  background-color: rgb(235, 232, 232);
+  border: 1px solid lightgrey;
+  border-left-style: none;
+}
+
+#signupsubmitbtn {
+  background-color: rgb(235, 232, 232);
+}
+
+#signup {
+  display: none;
+}
+
+#useremailval {
+  display: none;
+}
+
+#useremailvalfalse {
+  display: none;
+}
+
+#userpassval {
+  display: none;
+}
+
+#userpassvalfalse {
+  display: none;
+}
+
+#usernamewarn { 
+  border: 1px solid red;
+  color: red;
+}
+
+#lastnamewarn { 
+  border: 1px solid red;
+  color: red;
+}
+
+#emailwarn { 
+  border: 1px solid red;
+  color: red;
+}
+
+#passwarn { 
+  border: 1px solid red;
+  color: red;
+}
+
+#passcontwarn { 
+  border: 1px solid red;
+  color: red;
+}
+
+#pass-match-err {
+  border: 1px solid red;
+  color: red;
+  display: none;
+}

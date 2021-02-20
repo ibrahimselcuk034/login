@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Login Page Project</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+</head>
+<body>
+    <div id="maincontainer">
+      <div class="ui buttons fluid" id="buttons">
+        <button class="ui button" id="loginbtn" onclick="loginTab()" autofocus>Giriş yap</button>
+        <button class="ui button" id="signupbtn" onclick="signupTab()" >Üye ol</button>
+      </div>
+      <div class="ui form" id="login">
+        <br>
+        <div class="field">
+          <input type="email" id="useremail" placeholder="E-posta adresi" oninput="closeEmailWarnings()">
+          <div class="ui pointing label" id="useremailval">
+            Bu alan boş bırakılamaz
+          </div>
+          <div class="ui pointing label" id="useremailvalfalse">
+            E-posta adresi eksik veya yanlış.
+          </div>
+        </div>
+        
+        <div class="ui fluid action input userfield">
+          <input type="password" id="userpassword" placeholder="Şifre" oninput="closePasswordWarnings()">
+          <button class="ui icon button" id="passwordmask">
+            <i class="eye icon" onclick="PassShow(userpassword)"></i>
+          </button>
+        </div>
+        <div class="ui pointing label" id="userpassval">
+          Bu alan boş bırakılamaz
+        </div>
+        <div class="ui pointing label" id="userpassvalfalse">
+          Parolanız en az 6 karakter olmalı. En az bir küçük harf, bir büyük harf ve bir rakam olmalı.
+        </div>
+        <br>
+        <div class="ui submit button fluid" id="submitbtn" onclick="signInSubmit()">Giriş yap</div>
+        <br>
+        <div>
+          <p style="color: orangered; font-weight: bold">Şifremi unuttum</p>
+        </div>
+      </div>
+      <div class="ui form" id="signup">
+        <br>
+        <div class="two fields">
+          <div class="field">
+            <label>E-posta adresi ile üye ol</label>
+            <input placeholder="Ad" type="text" id="signupfirstname" minlength="3" maxlength="24" oninput="FirstNameVal()">
+            <div class="ui pointing label" id="usernamewarn">
+              Bu alan boş bırakılamaz
+            </div>
+          </div>
+          <div class="field">
+            <label> <hr align="right" width="85%" style="border-top: 1px solid rgb(235, 232, 232)"> </label>
+            <input placeholder="Soyad" type="text" id="signuplastname" style="margin-top: 8px;" minlength="3" maxlength="24" oninput="closeLastNameWarn()">
+            <div class="ui pointing label" id="lastnamewarn">
+              Bu alan boş bırakılamaz
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <input type="email" id="signupmail" placeholder="E-posta adresi" oninput="closeEmailWarn()">
+          <div class="ui pointing label" id="emailwarn">
+            Bu alan boş bırakılamaz
+          </div>
+        </div>
+        <div class="ui fluid action input userfield">
+          <input type="password" id="signuppassword" placeholder="Şifre" oninput="closePassWarn()">
+          <button class="ui icon button" id="signuppassmask1" onclick="PassShow(signuppassword)">
+            <i class="eye icon"></i>
+          </button>
+        </div>
+        <div class="ui pointing label" id="passwarn">
+          Bu alan boş bırakılamaz
+        </div>
+        <br>
+        <br>
+        <div class="ui fluid action input userfield">
+          <input type="password" id="signuppasswordcontrol" placeholder="Şifre Onayı" oninput="closePassCtrlWarn()">
+          <button class="ui icon button" id="signuppassmask2" onclick="PassShow(signuppasswordcontrol)">
+            <i class="eye icon"></i>
+          </button>
+        </div>
+        <div class="ui pointing label" id="passcontwarn">
+          Bu alan boş bırakılamaz
+        </div>
+        <div class="ui pointing label" id="pass-match-err">
+          Şifreler birbiriyle uyuşmamaktadır
+        </div>
+        <br>
+        <br>
+        <div class="ui submit button fluid disabled" id="signupsubmitbtn" onclick="signUpSubmit()">Üye ol</div>
+        <br>
+        <div class="inline field">
+          <div class="checkbox">
+            <input type="checkbox" tabindex="0" class="hidden" id="checkbox">
+            <label style="text-align: justify;">Önemli kampanyalardan haberdar olmak için <span style="font-weight: bolder;">Rıza Metni</span> kapsamında elektronik ileti almak istiyorum.</label>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+ 
+
+
+
+
+    
+    <script src="./js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+</body>
+</html>
